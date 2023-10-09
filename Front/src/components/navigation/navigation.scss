@@ -1,0 +1,48 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/variables.scss';
+
+.navContainer {
+  display: flex;
+  width: 95%;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 5px;
+  z-index: 5;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid $deep-bg;
+  .logo {
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include sm {
+      text-align: end;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      .profileImg {
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 5px;
+      }
+      button {
+        padding: 3px;
+        background-color: transparent;
+        border: 2px outset $dark-bg;
+        color: $dark-bg !important;
+        font-weight: 700;
+        &:hover {
+          background-color: $main-bg;
+          color: white;
+        }
+      }
+    }
+  }
+}
